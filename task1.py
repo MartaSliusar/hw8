@@ -4,10 +4,9 @@ def roman_to_integer(s):
     while True:
         for i in range(len(s)):
             if i > 0 and roman[s[i]] > roman[s[i-1]]:
-                integer += roman[s[i]]-roman[s[i-1]]
+                integer += roman[s[i]]-2*roman[s[i-1]]
             else:
                 integer += roman[s[i]]
         return integer
 
-s = "LVIII"
-print(roman_to_integer(s))
+
